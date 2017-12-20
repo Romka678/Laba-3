@@ -437,9 +437,8 @@ double answer(const Stack<Lexem>& s)
 {
 	Stack<Lexem> stack = s;
 	Stack<Lexem> stack2;
-	int i = stack.get_nElem();
-	Lexem* st = new Lexem[i / 2 + 1];
-	i = 0;
+	int i = 0;
+	Lexem* st = new Lexem[stack.get_nElem() / 2 + 1];
 	while (!(stack.check_void()))
 	{
 		Lexem a = stack.pop();
@@ -462,13 +461,13 @@ double answer(const Stack<Lexem>& s)
 				}
 			if (p)
 			{
-				cout << "Write parametr " << a.return_s() << endl;
+				cout << "Write parametr." << a.return_s() << endl;
 				double w;
 				cin >> w;
-				Lexem a(a.return_b(), a.return_s(), k * w, a.return_c());
-				a = k * w;
+				Lexem b(a.return_b(), a.return_s(), k * w, a.return_c());
+				a = w;
 				stack2.push(a);
-				st[i++] = a;
+				st[i++] = b;
 			}
 			else
 			{

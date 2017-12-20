@@ -21,15 +21,19 @@ void main()
 		a = polish_notation(a);
 		while (f == 1)
 		{
+			do {
 			cout << answer(a) << endl;
 			cout << "Do you want to repeat with other parametrs?" << endl;
 			cout << "1 - yes" << endl;
 			cout << "2 - no" << endl;
 			cin >> f;
+			} while ((h != 1) && (h != 2));
 		}
-		cout << "Do you want to repeat?" << endl;
-		cout << "1 - yes" << endl;
-		cout << "2 - no" << endl;
-		cin >> h;
+		do {
+			cout << "Do you want to repeat?" << endl;
+			cout << "1 - yes" << endl;
+			cout << "2 - no" << endl;
+			cin >> h;
+		} while ((h != 1) && (h != 2));
 	}
 }
