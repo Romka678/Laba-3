@@ -464,8 +464,8 @@ double answer(const Stack<Lexem>& s)
 				cout << "Write parametr." << a.return_s() << endl;
 				double w;
 				cin >> w;
-				Lexem b(a.return_b(), a.return_s(), k * w, a.return_c());
-				a = w;
+				Lexem b(a.return_b(), a.return_s(), w, a.return_c());
+				a = k * w;
 				stack2.push(a);
 				st[i++] = b;
 			}
